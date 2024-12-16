@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-style: normal;
+    font-family: "DM Sans", serif;
+    color: black;
+    background: blue;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+h3 {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.text-color-white {
+    color: white;
+}
+
+.text-color-black {
+    color: #122130;
+}
+
+.wrapper-main {
+    margin: 30px;
+    display: flex;
+    flex-direction: row; /* por  defecto */
+}
+
+.wrapper-text{
+    background: yellow;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+.wrapper-text2{
+    background: blue;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    border-color: black;
+    border: #122130;
+}
+.wrapper-text3{
+    background: red;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.button {
+    background: white;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.wrapper-button-svg{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background: #DFDBFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-text{
+    margin-left: 5px;
+}
+
+.button-svg{
+    width: 20px;
+    height: auto;
+}
+
+.wrapper-image {
+    display: none;
+}
+.imagen-central {
+    display: block;
+}
+
+@media screen and (min-width: 0px){
+    .wrapper-main {
+        flex-direction: column;
+    }
+
+    .wrapper-image {
+        display: block;
+    }
+    .wrapper-text2{
+        display: none;
+    }
+
+    .image {
+        border-radius: 20px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 480px){
+    .wrapper-main {
+        flex-direction: column;
+    }
+    .wrapper-text{
+        display: none;
+    }
+    .wrapper-text2{
+        display: none;
+    }
+
+    .wrapper-image {
+        display: block;
+    }
+
+    .image {
+        border-radius: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    
+    .wrapper-main {
+        display: flex;
+
+    }
+    .wrapper-image{
+        align-items: flex-start;
+        width: 100%;
+        height: 30%;
+    }
+    .wrapper-text{
+        display: block;
+        align-self: self-start;
+        width: 50%;
+        height: 200px;
+    }
+    .wrapper-text2{
+        display: block;
+        align-self: baseline;
+        width: 50%;
+    }
+    .wrapper-text3{
+        align-self: self-end;
+        width: 50%;
+    }
+    .image {
+        width: 100%;
+        height: 30vh;
+        /* height: 30%;
+        Si el contenedor no tiene una altura explícita definida, el navegador no puede calcular el valor relativo, lo que puede hacer que el elemento ocupe toda la altura del viewport o tenga un comportamiento inesperado*/
+        object-fit: cover;
+    }
+}
